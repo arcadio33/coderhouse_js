@@ -1,1 +1,1 @@
-# coderhouse_js
+# Proyecto JavaScript - Coderhouse
