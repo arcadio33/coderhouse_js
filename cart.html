@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Daijobu</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+       
+        <link href="./css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <nav>
+        <a class="logo" href="index.html">
+            <img class="logo-imagen" src="./images/daijobulogo.png" alt="Logo tienda Daijobu">
+        </a>
+    </nav>
+    <div class="container">
+        <aside>
+            <ul class="menu">
+                
+            </ul>
+        </aside>
+        <main>
+            <div class="titulo-wrapper">
+                <h2 class="titulo-principal" id="titulo-principal">Carrito</h2>
+                <div class="header-links">
+                    <a class="boton-carrito" href="cart.html">
+                        <ion-icon name="cart-outline"></ion-icon> Carrito <span id="numerito" class="numerito">0</span>
+                    </a>
+                    <a class="boton-volver" href="index.html">
+                        <ion-icon name="arrow-undo-outline"></ion-icon> Volver atras
+                    </a>
+                </div>
+            </div>
+            <div class="contenedor-carrito">
+                <p id="carrito-vacio" class="carrito-vacio">Tu carrito está vacío.</p>
+
+                <div id="carrito-productos" class="carrito-productos">
+                    <div class="carrito-producto">
+                        <img class="carrito-producto-imagen" src="./images/tienda/medias/mediasheroaca.webp" alt="">
+                        <div class="carrito-titulo carrito-producto-titulo">
+                            <small>Articulo</small>
+                            <p>Medias one Piece</p>
+                        </div>
+                        <div class="carrito-titulo carrito-producto-cantidad">
+                            <small>Cantidad</small>
+                            <p>1</p>
+                        </div>
+                        <div class="carrito-titulo carrito-producto-precio">
+                            <small>Precio</small>
+                            <p>$10000</p>
+                        </div>
+                        <div class="carrito-titulo carrito-producto-subtotal">
+                            <small>Subtotal</small>
+                            <p>$10000</p>
+                        </div>
+                        <button class="carrito-producto-eliminar"><ion-icon name="trash-outline"></ion-icon></button>
+                    </div>
+                    <div class="carrito-producto">
+                        <img class="carrito-producto-imagen" src="./images/tienda/medias/mediasheroaca.webp" alt="">
+                        <div class="carrito-titulo carrito-producto-titulo">
+                            <small>Articulo</small>
+                            <p>Medias one Piece</p>
+                        </div>
+                        <div class="carrito-titulo carrito-producto-cantidad">
+                            <small>Cantidad</small>
+                            <p>1</p>
+                        </div>
+                        <div class="carrito-titulo carrito-producto-precio">
+                            <small>Precio</small>
+                            <p>$10000</p>
+                        </div>
+                        <div class="carrito-titulo carrito-producto-subtotal">
+                            <small>Subtotal</small>
+                            <p>$10000</p>
+                        </div>
+                        <button class="carrito-producto-eliminar"><ion-icon name="trash-outline"></ion-icon></button>
+                    </div>
+                </div>
+                <div class="carrito-acciones">
+                    <div class="carrito-acciones-izquierda">
+                        <button class="carrito-acciones-vaciar" id="eliminar">Vaciar carrito</button>
+                    </div>
+                    <div class="carrito-acciones-derecha">
+                        <div class="carrito-acciones-total">
+                            <p>Total:</p>
+                            <p id="total">$3000</p>
+                        </div>
+                        <button class="carrito-acciones-comprar" id="comprar">Comprar ahora</button>
+                    </div>
+                </div>
+
+                <p id="carrito-comprado" class="carrito-comprado disabled">Gracias por comprar en Daijobu!</p>
+
+            </div>
+            
+        </main>
+    </div>
+    <footer>
+        <div>
+            <div class="contact">
+                <h4>Contactanos</h4>
+                <p>Si querés consultarnos por tu pedido, nuestra modalidad de trabajo o diseños personalizados, escribinos y te responderemos a la brevedad.</p>
+                <form action="POST">
+                    <input id="email" type="email" placeholder="Email">
+                    <button class="product-button" id="send">Enviar</button>
+                </form>
+                <ul>
+                    <li><i class="lni lni-phone"></i>1142824828</li>
+                    <li><i class="lni lni-envelope"></i><a href="mailto:info@daijobu.com">info@daijobu.com</a></li>
+                    <li><i class="lni lni-facebook-original"></i></li>
+                    <li><i class="lni lni-instagram-original"></i></li>
+                </ul>
+            </div>
+            <div class="sitemap">
+                <h4>Mapa del sitio</h4>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./contacto.html">Sobre nosotros</a></li>
+                    <li><a href="./tienda.html">Shop</a></li>
+                    <li><a href="#">Puntos de venta</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="ask">
+                <h4>Preguntas Frecuentes</h4>
+                <p>¿Qué materiales trabajamos?</p>
+                <p>¿Dónde esta mi envío?</p>
+                <p>¿Realizan envíos internacionales?</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/carrito.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
