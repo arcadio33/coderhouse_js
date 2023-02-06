@@ -1,0 +1,162 @@
+[
+	{
+        "id": "1",
+        "name": "Medias My Hero Academia",
+        "price": 1500,
+        "image": "/images/tienda/medias/mediasheroaca.webp",
+        "category": {
+            "name": "Medias",
+            "id": "medias"
+        }
+    },
+	{
+        "id": "2",
+        "name": "Medias My Hero Academia Bakugo",
+        "price": 1500,
+        "image": "/images/tienda/medias/mediasheroacabakugo.webp",
+        "category": {
+            "name": "Medias",
+            "id": "medias"
+        }
+    },
+	{
+        "id": "3",
+        "name": "Medias Naruto",
+        "price": 1500,
+        "image": "/images/tienda/medias/mediasnaruto.webp",
+        "category": {
+            "name": "Medias",
+            "id": "medias"
+        }
+    },
+	{
+        "id": "4",
+        "name": "Remera Darling in the Franxx",
+        "price": 3500,
+        "image": "/images/tienda/remera/remeradarlingfranz.webp",
+        "category": {
+            "name": "Remera",
+            "id": "remera"
+        }
+    },
+	{
+        "id": "5",
+        "name": "Remera My Hero Academia",
+        "price": 3500,
+        "image": "/images/tienda/remera/remeraheroaca.webp",
+        "category": {
+            "name": "Remera",
+            "id": "remera"
+        }
+    },
+	{
+        "id": "6",
+        "name": "Remera Junji Ito - Uzumaki",
+        "price": 3500,
+        "image": "/images/tienda/remera/remerajunjiitouzumaki.webp",
+        "category": {
+            "name": "Remera",
+            "id": "remera"
+        }
+    },
+    {
+        "id": "7",
+        "name": "Remera One Piece - Straw Hat",
+        "price": 3500,
+        "image": "/images/tienda/remera/remereaonepiecestrawhat.webp",
+        "category": {
+            "name": "Remera",
+            "id": "remera"
+        }
+    },
+    {
+        "id": "8",
+        "name": "Sweater Jojo",
+        "price": 8000,
+        "image": "/images/tienda/sweater/jojo.jpg",
+        "category": {
+            "name": "Sweater",
+            "id": "sweater"
+        }
+    },
+	{
+        "id": "9",
+        "name": "Sweater Junji-Ito",
+        "price": 8000,
+        "image": "/images/tienda/sweater/junji-ito.webp",
+        "category": {
+            "name": "Sweater",
+            "id": "sweater"
+        }
+    },
+	{
+        "id": "10",
+        "name": "Sweater naruto",
+        "price": 8000,
+        "image": "/images/tienda/sweater/naruto.jpg",
+        "category": {
+            "name": "Sweater",
+            "id": "sweater"
+        }
+    },
+	{
+        "id": "11",
+        "name": "Sweater One Piece - Devil Fruit",
+        "price": 8000,
+        "image": "/images/tienda/sweater/onepiece.jpg",
+        "category": {
+            "name": "Sweater",
+            "id": "sweater"
+        }
+    },
+	{
+        "id": "12",
+        "name": "Sweater Shingeki no Kyojin Corps",
+        "price": 8000,
+        "image": "/images/tienda/sweater/shingeki.jpg",
+        "category": {
+            "name": "Sweater",
+            "id": "sweater"
+        }
+    },
+    {
+        "id": "13",
+        "name": "Medias Avatar - Aang",
+        "price": 1500,
+        "image": "/images/tienda/medias/mediaang.jpg",
+        "category": {
+            "name": "Medias",
+            "id": "medias"
+        }
+    },
+    {
+        "id": "14",
+        "name": "Medias Avatar - Zuko",
+        "price": 1500,
+        "image": "/images/tienda/medias/mediazuko.jpg",
+        "category": {
+            "name": "Medias",
+            "id": "medias"
+        }
+    },
+    {
+        "id": "15",
+        "name": "Remera Death Note",
+        "price": 3500,
+        "image": "/images/tienda/remera/remeradeathnote.webp",
+        "category": {
+            "name": "Remera",
+            "id": "remera"
+        }
+    },
+    {
+        "id": "16",
+        "name": "Remera Bleach",
+        "price": 3500,
+        "image": "/images/tienda/remera/remerableach.webp",
+        "category": {
+            "name": "Remera",
+            "id": "remera"
+        }
+    }
+]

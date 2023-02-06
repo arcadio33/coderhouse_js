@@ -27,73 +27,36 @@
             <div class="titulo-wrapper">
                 <h2 class="titulo-principal" id="titulo-principal">Carrito</h2>
                 <div class="header-links">
-                    <a class="boton-carrito" href="cart.html">
-                        <ion-icon name="cart-outline"></ion-icon> Carrito <span id="numerito" class="numerito">0</span>
-                    </a>
                     <a class="boton-volver" href="index.html">
                         <ion-icon name="arrow-undo-outline"></ion-icon> Volver atras
                     </a>
                 </div>
             </div>
             <div class="contenedor-carrito">
-                <p id="carrito-vacio" class="carrito-vacio">Tu carrito está vacío.</p>
-
-                <div id="carrito-productos" class="carrito-productos">
-                    <div class="carrito-producto">
-                        <img class="carrito-producto-imagen" src="./images/tienda/medias/mediasheroaca.webp" alt="">
-                        <div class="carrito-titulo carrito-producto-titulo">
-                            <small>Articulo</small>
-                            <p>Medias one Piece</p>
-                        </div>
-                        <div class="carrito-titulo carrito-producto-cantidad">
-                            <small>Cantidad</small>
-                            <p>1</p>
-                        </div>
-                        <div class="carrito-titulo carrito-producto-precio">
-                            <small>Precio</small>
-                            <p>$10000</p>
-                        </div>
-                        <div class="carrito-titulo carrito-producto-subtotal">
-                            <small>Subtotal</small>
-                            <p>$10000</p>
-                        </div>
-                        <button class="carrito-producto-eliminar"><ion-icon name="trash-outline"></ion-icon></button>
-                    </div>
-                    <div class="carrito-producto">
-                        <img class="carrito-producto-imagen" src="./images/tienda/medias/mediasheroaca.webp" alt="">
-                        <div class="carrito-titulo carrito-producto-titulo">
-                            <small>Articulo</small>
-                            <p>Medias one Piece</p>
-                        </div>
-                        <div class="carrito-titulo carrito-producto-cantidad">
-                            <small>Cantidad</small>
-                            <p>1</p>
-                        </div>
-                        <div class="carrito-titulo carrito-producto-precio">
-                            <small>Precio</small>
-                            <p>$10000</p>
-                        </div>
-                        <div class="carrito-titulo carrito-producto-subtotal">
-                            <small>Subtotal</small>
-                            <p>$10000</p>
-                        </div>
-                        <button class="carrito-producto-eliminar"><ion-icon name="trash-outline"></ion-icon></button>
-                    </div>
+                <div class="carrito-vacio" id="carrito-vacio">
+                    <p>Tu carrito está vacío.</p>
                 </div>
-                <div class="carrito-acciones">
+
+                <div id="carrito-productos" class="carrito-productos disabled">
+                    
+                </div>
+
+                <div id="carrito-acciones" class="carrito-acciones disabled">
                     <div class="carrito-acciones-izquierda">
                         <button class="carrito-acciones-vaciar" id="eliminar">Vaciar carrito</button>
                     </div>
                     <div class="carrito-acciones-derecha">
                         <div class="carrito-acciones-total">
                             <p>Total:</p>
-                            <p id="total">$3000</p>
+                            <p id="total"></p>
                         </div>
                         <button class="carrito-acciones-comprar" id="comprar">Comprar ahora</button>
                     </div>
                 </div>
 
-                <p id="carrito-comprado" class="carrito-comprado disabled">Gracias por comprar en Daijobu!</p>
+                <div class="carrito-comprado disabled" id="carrito-comprado">
+                    <p>Gracias por comprar en Daijobu!</p>
+                </div>
 
             </div>
             
