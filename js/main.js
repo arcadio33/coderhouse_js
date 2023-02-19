@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 let productos = [];
 
 const fetchProducto = async() => {
@@ -17,6 +18,17 @@ const tituloSeccion = document.querySelector("#titulo-principal");
 let btnAgregarProductos = document.querySelectorAll(".producto-agregar"); 
 
 function cargarProductos (productoSeleccion) {
+=======
+import data from '../data.json' assert { type: "json" };
+
+const productos = data;
+const tituloSeccion = document.querySelector("#titulo-principal");
+let btnAgregarProductos = document.querySelectorAll(".producto-agregar"); 
+
+loadProductos(productos);
+
+function loadProductos (productoSeleccion) {
+>>>>>>> 81848f49b553f69e8d8d0dbb273058aec1eaf553
     const  contenedor = document.getElementById("contenedor-productos");
 
     contenedor.innerHTML = "";
@@ -53,7 +65,11 @@ grupoItems.forEach(item => {
             tituloSeccion.innerText = productoCategoria.category.name;
 
             const productosBoton = productos.filter(producto => producto.category.id === e.currentTarget.id);
+<<<<<<< HEAD
             cargarProductos(productosBoton);
+=======
+            loadProductos(productosBoton);
+>>>>>>> 81848f49b553f69e8d8d0dbb273058aec1eaf553
 
         } else {
             tituloSeccion.innerText = "Todos los productos";
@@ -101,6 +117,7 @@ function agregarAlCarrito(e){
     actualizarNumeroCarrito();
 
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+<<<<<<< HEAD
 
     Toastify({
         text: `Se agregó ${productoAgregado.name} al carrito`,
@@ -115,11 +132,14 @@ function agregarAlCarrito(e){
         },
         onClick: function(){} 
       }).showToast();
+=======
+>>>>>>> 81848f49b553f69e8d8d0dbb273058aec1eaf553
 }
 
 function actualizarNumeroCarrito(){
     let numero = productosEnCarrito.reduce((acc, producto) => acc + producto.amount, 0);
     carrito_numero.innerText = numero;
+<<<<<<< HEAD
 }
 
 
@@ -135,4 +155,6 @@ function suscribirse(){
       });
 
       input.value = "";
+=======
+>>>>>>> 81848f49b553f69e8d8d0dbb273058aec1eaf553
 }
