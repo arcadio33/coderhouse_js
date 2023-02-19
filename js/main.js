@@ -1,172 +1,22 @@
-const productos = [
-	{
-        "id": 1,
-        "name": "Medias My Hero Academia",
-        "price": 1500,
-        "image": "/images/tienda/medias/mediasheroaca.webp",
-        "category": {
-            "name": "Medias",
-            "id": "medias"
-        }
-    },
-	{
-        "id": 2,
-        "name": "Medias My Hero Academia Bakugo",
-        "price": 1500,
-        "image": "/images/tienda/medias/mediasheroacabakugo.webp",
-        "category": {
-            "name": "Medias",
-            "id": "medias"
-        }
-    },
-	{
-        "id": 3,
-        "name": "Medias Naruto",
-        "price": 1500,
-        "image": "/images/tienda/medias/mediasnaruto.webp",
-        "category": {
-            "name": "Medias",
-            "id": "medias"
-        }
-    },
-	{
-        "id": 4,
-        "name": "Remera Darling in the Franxx",
-        "price": 3500,
-        "image": "/images/tienda/remera/remeradarlingfranz.webp",
-        "category": {
-            "name": "Remera",
-            "id": "remera"
-        }
-    },
-	{
-        "id": 5,
-        "name": "Remera My Hero Academia",
-        "price": 3500,
-        "image": "/images/tienda/remera/remeraheroaca.webp",
-        "category": {
-            "name": "Remera",
-            "id": "remera"
-        }
-    },
-	{
-        "id": 6,
-        "name": "Remera Junji Ito - Uzumaki",
-        "price": 3500,
-        "image": "/images/tienda/remera/remerajunjiitouzumaki.webp",
-        "category": {
-            "name": "Remera",
-            "id": "remera"
-        }
-    },
-    {
-        "id": 7,
-        "name": "Remera One Piece - Straw Hat",
-        "price": 3500,
-        "image": "/images/tienda/remera/remereaonepiecestrawhat.webp",
-        "category": {
-            "name": "Remera",
-            "id": "remera"
-        }
-    },
-    {
-        "id": 8,
-        "name": "Sweater Jojo",
-        "price": 8000,
-        "image": "/images/tienda/sweater/jojo.jpg",
-        "category": {
-            "name": "Sweater",
-            "id": "sweater"
-        }
-    },
-	{
-        "id": 9,
-        "name": "Sweater Junji-Ito",
-        "price": 8000,
-        "image": "/images/tienda/sweater/junji-ito.webp",
-        "category": {
-            "name": "Sweater",
-            "id": "sweater"
-        }
-    },
-	{
-        "id": 10,
-        "name": "Sweater naruto",
-        "price": 8000,
-        "image": "/images/tienda/sweater/naruto.jpg",
-        "category": {
-            "name": "Sweater",
-            "id": "sweater"
-        }
-    },
-	{
-        "id": 11,
-        "name": "Sweater One Piece - Devil Fruit",
-        "price": 8000,
-        "image": "/images/tienda/sweater/onepiece.jpg",
-        "category": {
-            "name": "Sweater",
-            "id": "sweater"
-        }
-    },
-	{
-        "id": 12,
-        "name": "Sweater Shingeki no Kyojin Corps",
-        "price": 8000,
-        "image": "/images/tienda/sweater/shingeki.jpg",
-        "category": {
-            "name": "Sweater",
-            "id": "sweater"
-        }
-    },
-    {
-        "id": 13,
-        "name": "Medias Avatar - Aang",
-        "price": 1500,
-        "image": "/images/tienda/medias/mediaang.jpg",
-        "category": {
-            "name": "Medias",
-            "id": "medias"
-        }
-    },
-    {
-        "id": 14,
-        "name": "Medias Avatar - Zuko",
-        "price": 1500,
-        "image": "/images/tienda/medias/mediazuko.jpg",
-        "category": {
-            "name": "Medias",
-            "id": "medias"
-        }
-    },
-    {
-        "id": 15,
-        "name": "Remera Death Note",
-        "price": 3500,
-        "image": "/images/tienda/remera/remeradeathnote.webp",
-        "category": {
-            "name": "Remera",
-            "id": "remera"
-        }
-    },
-    {
-        "id": 16,
-        "name": "Remera Bleach",
-        "price": 3500,
-        "image": "/images/tienda/remera/remerableach.webp",
-        "category": {
-            "name": "Remera",
-            "id": "remera"
-        }
+let productos = [];
+
+const fetchProducto = async() => {
+    try{
+        const productosJson = await fetch("../data.json");
+        const data = await productosJson.json();
+        productos = data;
+        cargarProductos(productos);
+    }catch{
+        console.log(error);
     }
-]
+}
 
+fetchProducto();
 
-loadProductos(productos);
-
-//Utilizacion de loops, metodos de array: ya se deja el codigo para utilizar al momento de cargar elementos en el DOM de manera dinamica
 const tituloSeccion = document.querySelector("#titulo-principal");
-function loadProductos (productoSeleccion) {
+let btnAgregarProductos = document.querySelectorAll(".producto-agregar"); 
+
+function cargarProductos (productoSeleccion) {
     const  contenedor = document.getElementById("contenedor-productos");
 
     contenedor.innerHTML = "";
@@ -180,15 +30,16 @@ function loadProductos (productoSeleccion) {
             <div class="producto-detalles">
                 <h3 class="producto-titulo">${p.name}</h3>
                 <p class="producto-precio">$${p.price}</p>
-                <button class="producto-agregar" id=${p.id}">Agregar</button>
+                <button class="producto-agregar" id=${p.id}>Agregar</button>
             </div>`
 
             contenedor.append(div);
     });
+
+    actualizarBotonesAgregar();
 }
 
 
-//Utilizacion de loops, metodos de array: ya se deja el codigo para utilizar al momento de cargar elementos en el DOM de acuerdo a seleccion de boton de usuario
 const grupoItems = document.querySelectorAll(".boton-categoria"); 
 
 grupoItems.forEach(item => {
@@ -202,117 +53,86 @@ grupoItems.forEach(item => {
             tituloSeccion.innerText = productoCategoria.category.name;
 
             const productosBoton = productos.filter(producto => producto.category.id === e.currentTarget.id);
-            loadProductos(productosBoton);
+            cargarProductos(productosBoton);
+
         } else {
             tituloSeccion.innerText = "Todos los productos";
-            loadProductos(productos);
+            cargarProductos(productos);
         }
 
     })
 });
 
-// interacion con el usuario mediante prompt y alert
-let btnAgregarProductos = document.querySelectorAll(".producto-agregar"); 
-let productosCart = 0;
-let productosAgregadosAlCarrito = []
 
-btnAgregarProductos.forEach(item => {
-    item.addEventListener("click", () => {
+function actualizarBotonesAgregar() {
+    btnAgregarProductos = document.querySelectorAll(".producto-agregar");
 
-        let seAgrega = parseInt(prompt("Cuantos items desea agregar"));
-
-        productosAgregadosAlCarrito.push(item);
-
-        productosCart += seAgrega;
-
-        if(seAgrega > 0){
-            alert(`Agregaste ${productosCart} al carrito con exito!`);
-            console.log('Se agregaron los productos al carrito')
-        }
-        else{
-            alert("No se agrego ningun item al carrito")
-            console.log('No se agregó nada al carrito')
-        }
+    btnAgregarProductos.forEach(boton => {
+        boton.addEventListener("click", agregarAlCarrito);
     });
-});
-
-// funcion que realiza operacion de suma y resta para obtener el total a pagar
-function totalAPagar(){
-    let totalAPagar = 0;
-    productosAgregadosAlCarrito.forEach(item =>{
-        totalAPagar += item.price;
-    });
-
-    let descuento = 100;
-    let total = totalAPagar - descuento;
-    return total;
-   
 }
 
 
-//PARA PRE ENTREGA N°2 - PROMPT Y ALERT
-//simulador de carrito via prompt.
-function cartViaPrompt() {
-    const precioMedias = 1500
-    const precioRemera = 3500
-    const precioSweater = 8000
-    let cart = []
+const carrito_numero = document.getElementById("carrito_numero");
+let productosEnCarrito;
+const productosEnCarritoLocalStorage = JSON.parse(localStorage.getItem("productos-en-carrito"));
 
-//selección de cantidad de elementos de cada tipo con agregado al array
-    let compraMedias = parseInt(prompt('¿Cuantas medias querés comprar?'));
-    while (isNaN(compraMedias)) {
-        compraMedias = parseInt(prompt('Por favor escribi un numero'))
-    };
+if(productosEnCarritoLocalStorage){
+    productosEnCarrito = productosEnCarritoLocalStorage;
+    actualizarNumeroCarrito();
+}else{
+    productosEnCarrito = [];
+}
 
-    totalMedias = precioMedias*compraMedias;
-    cart.push(compraMedias + ' par/es de medias');
+function agregarAlCarrito(e){
+    const btnId = e.currentTarget.id;
+    const productoAgregado = productos.find(producto => producto.id === btnId);
 
-    let compraRemeras = parseInt(prompt('¿Cuantas remeras querés comprar?'));
-    while (isNaN(compraRemeras)) {
-        compraRemeras = parseInt(prompt('Por favor escribi un numero'))
-    };
-    totalRemeras = precioRemera*compraRemeras;
-    cart.push(compraRemeras + ' remeras');
+    if(productosEnCarrito.some(producto => producto.id === btnId)){
 
-    let compraSweater = parseInt(prompt('¿Cuantos sweaters querés comprar?'));
-    while (isNaN(compraSweater)) {
-        compraSweater = parseInt(prompt('Por favor escribi un numero'));
-    };
-   
-    totalSweater = precioSweater*compraSweater;
-    cart.push(compraSweater + ' sweaters');
+        const index = productosEnCarrito.findIndex(producto => producto.id === btnId);
+        productosEnCarrito[index].amount++;
 
-//cálculo del precio total
-    totalCartPrecio = totalMedias + totalRemeras + totalSweater;
+    }else{
+        productoAgregado.amount = 1;
+        productosEnCarrito.push(productoAgregado);
+    }
 
-    console.log(cart);
+    actualizarNumeroCarrito();
 
-    alert(`Tu carrito contiene ${cart} y su costo es ${totalCartPrecio}`);
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 
-//prompt para remover elemento del carrito
-    let remover = parseInt(prompt('Para remover medias presiona 1, para remover remeras presiona 2, para remover sweater presiona 3, para no remover nada y continuar presiona 4'));
-    while (isNaN(remover) || remover < 1 || remover > 4 ) {
-        remover = parseInt(prompt('Por favor, para remover medias presiona 1, para remover remeras presiona 2, para remover sweater presiona 3, para no remover nada y continuar presiona 4'))
-    };
+    Toastify({
+        text: `Se agregó ${productoAgregado.name} al carrito`,
+        duration: 3000,
+        newWindow: true,
+        close: true,
+        gravity: "bottom", 
+        position: "right", 
+        stopOnFocus: true, 
+        style: {
+          background:  "#198754",
+        },
+        onClick: function(){} 
+      }).showToast();
+}
 
-// se usan diferentes métodos para alterar el array. Basado en la posición de cada producto en el mismo
-    switch(remover) {
-        case 1:
-            cart.shift();
-            totalCartPrecio -= totalMedias
-            break;
-        case 2:
-            cart.splice(1,1)
-            totalCartPrecio -= totalRemeras
-            break;
-        case 3:
-            cart.pop()
-            totalCartPrecio -= totalSweater
-            break; 
-        case 4:
-            break;     
-    };
+function actualizarNumeroCarrito(){
+    let numero = productosEnCarrito.reduce((acc, producto) => acc + producto.amount, 0);
+    carrito_numero.innerText = numero;
+}
 
 
-    alert(`Tu carrito contiene ${cart} y su costo es ${totalCartPrecio}`)
+const enviarMail = document.getElementById("send");
+var input = document.querySelector("input[type='email']");
+
+enviarMail.addEventListener("click", suscribirse);
+
+function suscribirse(){
+    Swal.fire({
+        title: '¡Listo!',
+        text: 'Ya estas suscripto.',
+      });
+
+      input.value = "";
 }

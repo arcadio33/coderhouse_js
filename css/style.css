@@ -174,14 +174,18 @@ main {
     border-radius: 1rem;
 }
 
+.carrito-producto-titulo {
+    width: 6rem;
+}
+
 .carrito-titulo small {
     font-size: 1rem;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
 }
 
 .carrito-titulo p{
-    text-align: center;
+    text-align: left;
 }
 
 .carrito-producto-eliminar {
@@ -246,87 +250,140 @@ main {
     color: white;
 }
 
-
-
 footer{
     background-color: black;
     color: white;
-  }
-  
-  footer div{
-    margin: 0 10rem;
+    padding: 3rem 0;
+}
+
+footer div{
     display: flex;
     justify-content: space-around;
-    padding: 2rem 0;
-  }
-  
-  .sitemap,
-  .ask,
-  .contact{
+}
+
+.sitemap,
+.contact{
+display: flex;
+flex-direction: column;
+text-transform: uppercase;
+}
+
+.contact p{
+text-transform: none;
+width: 28rem;
+}
+
+form{
+display: flex;
+}
+
+#email{
+padding: 0.2rem;
+width: 80%;
+}
+
+.contact ul{
+display: flex;
+font-size: 1.2rem;
+width: 100%;
+justify-content: space-between;
+}
+
+.contact ul li{
+margin: 0 .5rem 0 0;
+list-style: none;
+}
+
+.contact ul li i{
+margin-right: 0.2rem;
+}
+
+
+.contact ul li a{
+color: white;
+text-transform: none;
+text-decoration: none;
+}
+
+.sitemap{
+justify-content: flex-start;
+}
+
+.sitemap h4{
+width: 14rem;
+}
+
+.sitemap ul li{
+margin-top: 1rem;
+list-style: none;
+}
+
+.sitemap ul a{
+font-size: 0.9rem;
+text-transform: none;
+color: white;
+text-decoration: none;
+}
+
+.ask p{
+    text-transform: none;
+    margin-top: 2rem;
+}
+
+.disabled {
+    display: none;
+}
+
+.carrito-vacio,
+.carrito-comprado{
+    height: 4rem;
+    border-radius: 5px;
+    vertical-align: middle;
+    color: white;
+}
+
+.carrito-comprado{
+    background-color: #198754;
+    border: 1px solid #198754;
+}
+
+.carrito-vacio p,
+.carrito-comprado p{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 1rem;
+}
+
+.carrito-vacio{
+    background-color: #DC3545;
+    border: 1px solid #DC3545;
+}
+
+.product-button{
+    border: 1px solid white;
+    padding: .5rem 2rem;
+}
+
+.ask{
     display: flex;
     flex-direction: column;
-    text-transform: uppercase;
-  }
-  
-  .contact p{
-    text-transform: none;
-    width: 28rem;
-  }
-  
-  form{
+    width: 20rem;
+}
+
+.accordion-container{
     display: flex;
-  }
-  
-  #email{
-    padding: 0.2rem;
-    width: 80%;
-  }
-  
-  .contact ul{
-    display: flex;
-    font-size: 1.2rem;
-    width: 100%;
-    justify-content: space-between;
-  }
-  
-  .contact ul li{
-    margin: 0 .5rem 0 0;
-    list-style: none;
-  }
-  
-  .contact ul li i{
-    margin-right: 0.2rem;
-  }
-  
-  
-  .contact ul li a{
-    color: white;
-    text-transform: none;
-    text-decoration: none;
-  }
-  
-  .sitemap{
-    justify-content: flex-start;
-  }
-  
-  .ask h4,
-  .sitemap h4{
-    width: 14rem;
-  }
-  
-  .sitemap ul li{
-    margin-top: 1rem;
-    list-style: none;
-  }
-  
-  .sitemap ul a{
-    font-size: 0.9rem;
-    text-transform: none;
-    color: white;
-    text-decoration: none;
-  }
-  
-  .ask p{
-    text-transform: none;
-  }
-    
+    flex-direction: column;
+    margin: 0;
+}
+
+.ac{
+    background-color: black !important;
+}
+
+.ac-text,
+.ac .ac-trigger {
+    color: white !important;
+}
+
+
