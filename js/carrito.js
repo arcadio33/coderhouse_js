@@ -19,10 +19,6 @@ function cargarCarrito(){
         contenedorCarritoComprado.classList.add("disabled");
 
         contenedorCarritoProductos.innerHTML = "";
-<<<<<<< HEAD
-=======
-        let total = 0;
->>>>>>> 81848f49b553f69e8d8d0dbb273058aec1eaf553
 
         productosEnCarrito.forEach(p => {
             const subtotal = p.price * p.amount;
@@ -79,7 +75,6 @@ function actualizarBotonesEliminar(){
 
 function eliminarDelCarrito(e){
     const btnId = e.currentTarget.id;
-<<<<<<< HEAD
     const productoAEliminar = productosEnCarrito.find(producto => producto.id === btnId);
     const index = productosEnCarrito.findIndex(producto => producto.id === btnId);
     productosEnCarrito.splice(index, 1);
@@ -98,11 +93,6 @@ function eliminarDelCarrito(e){
         onClick: function(){} 
       }).showToast();
 
-=======
-    const index = productosEnCarrito.findIndex(producto => producto.id === btnId);
-    productosEnCarrito.splice(index, 1);
-
->>>>>>> 81848f49b553f69e8d8d0dbb273058aec1eaf553
     cargarCarrito();
 
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
@@ -111,7 +101,6 @@ function eliminarDelCarrito(e){
 btnVaciar.addEventListener("click", vaciarCarrito);
 
 function vaciarCarrito(){
-<<<<<<< HEAD
 
     Swal.fire({
         title: '¿Estas seguro que deseas vaciar tu carrito?',
@@ -131,12 +120,6 @@ function vaciarCarrito(){
         
         }
       })
-=======
-    productosEnCarrito.length = 0;
-    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
-
-    cargarCarrito();
->>>>>>> 81848f49b553f69e8d8d0dbb273058aec1eaf553
 }
 
 function calcularTotal(){
@@ -155,7 +138,6 @@ function comprarCarrito(){
     contenedorAcciones.classList.add("disabled");
     contenedorCarritoComprado.classList.remove("disabled");
 }
-<<<<<<< HEAD
 
 const enviarMail = document.getElementById("send");
 var input = document.querySelector("input[type='email']");
@@ -170,6 +152,4 @@ function suscribirse(){
 
       input.value = "";
 }
-=======
->>>>>>> 81848f49b553f69e8d8d0dbb273058aec1eaf553
 

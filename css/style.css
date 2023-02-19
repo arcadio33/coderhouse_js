@@ -253,7 +253,6 @@ main {
 footer{
     background-color: black;
     color: white;
-<<<<<<< HEAD
     padding: 3rem 0;
 }
 
@@ -263,19 +262,6 @@ footer div{
 }
 
 .sitemap,
-=======
-}
-
-footer div{
-margin: 0 10rem;
-display: flex;
-justify-content: space-around;
-padding: 2rem 0;
-}
-
-.sitemap,
-.ask,
->>>>>>> 81848f49b553f69e8d8d0dbb273058aec1eaf553
 .contact{
 display: flex;
 flex-direction: column;
@@ -323,10 +309,6 @@ text-decoration: none;
 justify-content: flex-start;
 }
 
-<<<<<<< HEAD
-=======
-.ask h4,
->>>>>>> 81848f49b553f69e8d8d0dbb273058aec1eaf553
 .sitemap h4{
 width: 14rem;
 }
@@ -344,12 +326,8 @@ text-decoration: none;
 }
 
 .ask p{
-<<<<<<< HEAD
     text-transform: none;
     margin-top: 2rem;
-=======
-text-transform: none;
->>>>>>> 81848f49b553f69e8d8d0dbb273058aec1eaf553
 }
 
 .disabled {
@@ -382,7 +360,6 @@ text-transform: none;
     border: 1px solid #DC3545;
 }
 
-<<<<<<< HEAD
 .product-button{
     border: 1px solid white;
     padding: .5rem 2rem;
@@ -408,7 +385,5 @@ text-transform: none;
 .ac .ac-trigger {
     color: white !important;
 }
-=======
->>>>>>> 81848f49b553f69e8d8d0dbb273058aec1eaf553
 
 
